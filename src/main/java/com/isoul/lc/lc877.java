@@ -10,8 +10,8 @@ public class lc877 {
     public boolean stoneGame(int[] piles) {
         int left = 0;
         int right = piles.length - 1;
-        int ylks[] = new int[piles.length / 2];
-        int l[] = new int[piles.length / 2];
+        int[] ylks = new int[piles.length / 2];
+        int[] l = new int[piles.length / 2];
         int i = 0;
 
         while (left < right) {
@@ -41,18 +41,14 @@ public class lc877 {
 
         int sum1 = 0;
         int sum2 = 0;
-        for (int i1 = 0; i1 < ylks.length; i1++) {
-            sum1 += ylks[i1];
+        for (int ylk : ylks) {
+            sum1 += ylk;
         }
         for (int i2 = 0; i2 < ylks.length; i2++) {
             sum2 += l[i2];
         }
 
-        if (sum1 > sum2) {
-            return true;
-        } else {
-            return false;
-        }
+        return sum1 > sum2;
     }
 
     public boolean ifchooseleft(int[] piles, int left, int right) {
