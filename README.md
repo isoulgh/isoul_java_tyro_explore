@@ -1,4 +1,4 @@
-# isoul_java_tyro_expore
+# isoul_java_tyro_explore
 
 此仓库为：
 
